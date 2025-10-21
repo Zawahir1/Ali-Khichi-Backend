@@ -16,7 +16,7 @@ app = FastAPI(title="Google Sheets CRUD + Auth API (Multi-Sheet + Audit)")
 ALLOWED_ORIGINS = "https://khichi-orpin.vercel.app"
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[o.strip() for o in ALLOWED_ORIGINS],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
